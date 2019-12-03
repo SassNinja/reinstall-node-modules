@@ -13,6 +13,7 @@ Install the package with your favorite manager
 ```bash
 npm install install-node-modules --save-dev
 ```
+
 ```bash
 yarn add install-node-modules --dev
 ```
@@ -23,9 +24,9 @@ You may use it in the `scripts` field of your `package.json`
 
 ```json
 {
-    "scripts": {
-        "reinstall": "install-node-modules"
-    }
+  "scripts": {
+    "reinstall": "install-node-modules"
+  }
 }
 ```
 
@@ -37,11 +38,11 @@ If you wanna use a hook for this it's recommended to use `post-merge`. An easy w
 
 ```json
 {
-    "husky": {
-        "hooks": {
-            "post-merge": "install-node-modules"
-        }
+  "husky": {
+    "hooks": {
+      "post-merge": "install-node-modules"
     }
+  }
 }
 ```
 
