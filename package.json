@@ -1,0 +1,30 @@
+{
+  "name": "install-node-modules",
+  "version": "1.0.0",
+  "description": "(re)install node modules only if they have changed",
+  "author": "Kai Falkowski",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "install-node-modules": "./bin/install-node-modules.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SassNinja/install-node-modules.git"
+  },
+  "keywords": [
+    "npm",
+    "yarn",
+    "install",
+    "reinstall",
+    "rebuild",
+    "changed",
+    "modified",
+    "hook",
+    "lightweight",
+    "zero-dependency"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
