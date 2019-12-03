@@ -40,7 +40,7 @@ function getFilePath(file) {
 }
 
 function install(opts) {
-    execSync(opts.manager === 'npm' && opts.file.endsWith('package-lock.json') ? 'npm ci' : `${opts.manager} install`);
+    execSync(opts.manager === 'npm' && opts.file.endsWith('package-lock.json') ? 'npm ci' : `${opts.manager} install`, { stdio: 'inherit' });
 }
 
 function run(options) {
@@ -51,14 +51,14 @@ function run(options) {
         .then(({ hasChanged, fileName }) => {
             if (hasChanged === true) {
                 try {
-                    console.log(`${fileName} has changed – (re)installing node modules now`);
+                    console.log(`\n\x1b[31m${fileName} has changed – (re)installing node modules now\x1b[0m\n`);
                     install(opts);
                 } catch (err) {
                     console.error(err);
                     process.exit(0);
                 }
             } else {
-                console.log(`${fileName} has not changed – no need to do anything`);
+                console.log(`\n\x1b[32m${fileName} has not changed – no need to do anything\x1b[0m`);
             }
             process.exit(1);
         })
