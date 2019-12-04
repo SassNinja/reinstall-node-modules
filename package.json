@@ -4,7 +4,7 @@
   "description": "(re)install node modules only if they have changed",
   "author": "Kai Falkowski",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {},
   "bin": {
     "install-node-modules": "./bin/install-node-modules.js"

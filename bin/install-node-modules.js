@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const installer = require('../');
+const installer = require('../lib');
 
 installer();
