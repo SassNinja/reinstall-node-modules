@@ -1,5 +1,7 @@
 # install-node-modules
 
+[![Build Status](https://travis-ci.com/SassNinja/install-node-modules.svg?branch=master)](https://travis-ci.com/SassNinja/install-node-modules)
+
 Have you ever been in the situation you were facing an issue that was simply caused by not having (re)installed node modules after someone had changed it?
 
 Are you tired of telling people to (re)install their node modules when they ask you why something is not working?
