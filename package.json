@@ -5,7 +5,9 @@
   "author": "Kai Falkowski",
   "license": "MIT",
   "main": "./lib/index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "bin": {
     "install-node-modules": "./bin/install-node-modules.js"
   },
@@ -26,5 +28,7 @@
     "zero-dependency"
   ],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
