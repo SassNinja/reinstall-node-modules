@@ -1,6 +1,6 @@
 {
-  "name": "install-node-modules",
-  "version": "1.0.0",
+  "name": "reinstall-node-modules",
+  "version": "1.0.1",
   "description": "(re)install node modules only if they have changed",
   "author": "Kai Falkowski",
   "license": "MIT",
@@ -9,11 +9,11 @@
     "test": "jest"
   },
   "bin": {
-    "install-node-modules": "./bin/install-node-modules.js"
+    "reinstall-node-modules": "./bin/reinstall-node-modules.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/SassNinja/install-node-modules.git"
+    "url": "git+ssh://git@github.com/SassNinja/reinstall-node-modules.git"
   },
   "keywords": [
     "npm",

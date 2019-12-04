@@ -1,6 +1,6 @@
-# install-node-modules
+# (re)install-node-modules
 
-[![Build Status](https://travis-ci.com/SassNinja/install-node-modules.svg?branch=master)](https://travis-ci.com/SassNinja/install-node-modules)
+[![Build Status](https://travis-ci.com/SassNinja/reinstall-node-modules.svg?branch=master)](https://travis-ci.com/SassNinja/reinstall-node-modules)
 
 Have you ever been in the situation you were facing an issue that was simply caused by not having (re)installed node modules after someone had changed it?
 
@@ -13,11 +13,11 @@ This lightweight, zero-dependency package might be the perfect solution for you!
 Install the package with your favorite manager
 
 ```bash
-npm install install-node-modules --save-dev
+npm install reinstall-node-modules --save-dev
 ```
 
 ```bash
-yarn add install-node-modules --dev
+yarn add reinstall-node-modules --dev
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ You may use it in the `scripts` field of your `package.json`
 ```json
 {
   "scripts": {
-    "reinstall": "install-node-modules"
+    "reinstall": "reinstall-node-modules"
   }
 }
 ```
@@ -42,7 +42,7 @@ If you wanna use a hook for this it's recommended to use `post-merge`. An easy w
 {
   "husky": {
     "hooks": {
-      "post-merge": "install-node-modules"
+      "post-merge": "reinstall-node-modules"
     }
   }
 }
@@ -53,7 +53,7 @@ If you wanna use a hook for this it's recommended to use `post-merge`. An easy w
 It's also possible import the package and use it programmatically though most of the time an npm-script or hook makes more sense.
 
 ```javascript
-const installer = require('install-node-modules');
+const installer = require('reinstall-node-modules');
 const options = {};
 
 installer(options);
@@ -68,7 +68,7 @@ The manager option defines the package manager that gets used to (re)install the
 If you wanna e.g. use `yarn` instead of `npm` you only need to pass it as option
 
 ```
-install-node-modules --manager yarn
+reinstall-node-modules --manager yarn
 ```
 
 ### file
@@ -78,7 +78,7 @@ The file option defines the path to the target package file that gets used to de
 If you wanna e.g. use `package-lock.json` instead of `package.json` you only need to pass it as option
 
 ```
-install-node-modules --file package-lock.json
+reinstall-node-modules --file package-lock.json
 ```
 
 ## Credits
