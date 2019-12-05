@@ -83,5 +83,10 @@ describe('utils', () => {
 
       expect(argv).toEqual({ manager: 'yarn', file: 'yarn.lock' });
     });
+    it('should be true if only --key is set without val', () => {
+      const argv = getArgv(['--production']);
+
+      expect(argv).toEqual({ production: 'true' });
+    });
   });
 });

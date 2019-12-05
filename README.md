@@ -1,6 +1,6 @@
 # (re)install-node-modules
 
-[![Build Status](https://travis-ci.com/SassNinja/reinstall-node-modules.svg?branch=master)](https://travis-ci.com/SassNinja/reinstall-node-modules)
+[![Build Status](https://travis-ci.com/SassNinja/reinstall-node-modules.svg?branch=master)](https://travis-ci.com/SassNinja/reinstall-node-modules) [![codecov](https://codecov.io/gh/SassNinja/reinstall-node-modules/branch/master/graph/badge.svg)](https://codecov.io/gh/SassNinja/reinstall-node-modules)
 
 Have you ever been in the situation you were facing an issue that was simply caused by not having (re)installed node modules after someone had changed it?
 

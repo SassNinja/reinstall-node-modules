@@ -30,5 +30,10 @@
   "dependencies": {},
   "devDependencies": {
     "jest": "^24.9.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node"
   }
 }
