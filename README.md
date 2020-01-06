@@ -81,6 +81,14 @@ If you wanna e.g. use `package-lock.json` instead of `package.json` you only nee
 reinstall-node-modules --file package-lock.json
 ```
 
+### dry
+
+The dry option disables an actual (re)install but only logs whether the target package file has changed.
+
+```
+reinstall-node-modules --dry
+```
+
 ## Credits
 
 This package is inspired by [install-changed](https://github.com/ninesalt/install-changed).

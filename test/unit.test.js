@@ -64,6 +64,10 @@ describe('main', () => {
       install({ manager: 'npm', file: 'package-lock.json' });
       expect(execSync.mock.calls[0][0]).toBe('npm ci');
     });
+    it('should not install if running dry', () => {
+      install({ dry: 'true' });
+      expect(execSync.mock.calls.length).toBe(0);
+    });
   });
 });
 describe('utils', () => {
