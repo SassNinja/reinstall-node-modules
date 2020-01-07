@@ -1,3 +1,4 @@
+jest.mock('fs');
 jest.mock('child_process');
 
 const fs = require('fs');
@@ -6,7 +7,14 @@ const { execSync } = require('child_process');
 const compareHash = require('../lib/compare-hash');
 const getFilePath = require('../lib/get-file-path');
 const install = require('../lib/install');
+const getConfigFile = require('../lib/get-config-file');
 const getArgv = require('../lib/utils/get-argv');
+
+const initialFiles = {};
+
+initialFiles[path.resolve(process.cwd(), 'package.json')] = '{"dependencies":[],"devDependencies":[]}';
+initialFiles[path.resolve(process.cwd(), 'package-lock.json')] = '{"name":"reinstall-node-modules"}';
+fs.__setMockFiles(initialFiles);
 
 describe('main', () => {
   describe('compare-hash', () => {
@@ -67,6 +75,17 @@ describe('main', () => {
     it('should not install if running dry', () => {
       install({ dry: 'true' });
       expect(execSync.mock.calls.length).toBe(0);
+    });
+  });
+  describe('get-config-file', () => {
+    it('should return empty object if no config file found', () => {
+      expect(getConfigFile()).toEqual({});
+    });
+    it('should return parsed JSON of config file if it exists', () => {
+      const filePath = path.join(process.cwd(), 'reinstall-node-modules.json');
+
+      fs.writeFileSync(filePath, '{"manager":"yarn"}');
+      expect(getConfigFile()).toEqual({ manager: 'yarn' });
     });
   });
 });
