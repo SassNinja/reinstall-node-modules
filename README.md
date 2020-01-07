@@ -92,7 +92,7 @@ reinstall-node-modules --dry
 ## Config
 
 Usually you set the options via command line arguments (e.g. `--dry`).
-If you prefer a config file instead just create a `.reinstall-node-modules.json` file in your process cwd.
+If you prefer a config file instead just create a `reinstall-node-modules.json` file in your process cwd.
 
 ## Credits
 
