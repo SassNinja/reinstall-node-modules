@@ -89,6 +89,11 @@ The dry option disables an actual (re)install but only logs whether the target p
 reinstall-node-modules --dry
 ```
 
+## Config
+
+Usually you set the options via command line arguments (e.g. `--dry`).
+If you prefer a config file instead just create a `.reinstall-node-modules.json` file in your process cwd.
+
 ## Credits
 
 This package is inspired by [install-changed](https://github.com/ninesalt/install-changed).
