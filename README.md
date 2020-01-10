@@ -81,12 +81,22 @@ If you wanna e.g. use `package-lock.json` instead of `package.json` you only nee
 reinstall-node-modules --file package-lock.json
 ```
 
-### dry
+### install
 
-The dry option disables an actual (re)install but only logs whether the target package file has changed.
+The install option defines if an actual (re)install is executed.
+So to disable it you only need to set it `false`
 
 ```
-reinstall-node-modules --dry
+reinstall-node-modules --install false
+```
+
+### updateHash
+
+The updateHash option defines if a \*.hash file is written to disk.
+Be careful with disabling this because your target package file will be considered as changed then every time.
+
+```
+reinstall-node-modules --updateHash false
 ```
 
 ## Config

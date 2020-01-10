@@ -72,8 +72,8 @@ describe('main', () => {
       install({ manager: 'npm', file: 'package-lock.json' });
       expect(execSync.mock.calls[0][0]).toBe('npm ci');
     });
-    it('should not install if running dry', () => {
-      install({ dry: 'true' });
+    it('should repect install option', () => {
+      install({ install: false });
       expect(execSync.mock.calls.length).toBe(0);
     });
   });
@@ -109,7 +109,17 @@ describe('utils', () => {
     it('should be true if only --key is set without val', () => {
       const argv = getArgv(['--production']);
 
-      expect(argv).toEqual({ production: 'true' });
+      expect(argv).toEqual({ production: true });
+    });
+    it('should be typeof boolean if command line argument is "true"', () => {
+      const argv = getArgv(['--production=true']);
+
+      expect(argv).toEqual({ production: true });
+    });
+    it('should be typeof boolean if command line argument is "false"', () => {
+      const argv = getArgv(['--production=false']);
+
+      expect(argv).toEqual({ production: false });
     });
   });
 });
