@@ -101,7 +101,7 @@ reinstall-node-modules --updateHash false
 
 ## Config
 
-Usually you set the options via command line arguments (e.g. `--dry`).
+Usually you set the options via command line arguments (e.g. `--install false`).
 If you prefer a config file instead just create a `reinstall-node-modules.json` file in your process cwd.
 
 ## Credits
