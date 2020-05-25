@@ -6,7 +6,7 @@ Have you ever been in the situation you were facing an issue that was simply cau
 
 Are you tired of telling people to (re)install their node modules when they ask you why something is not working?
 
-This lightweight, zero-dependency package might be the perfect solution for you! It (re)installs node modules whenever the target package file has changed!
+This lightweight package might be the perfect solution for you! It (re)installs node modules whenever the target package file has changed!
 
 ## Installation
 
@@ -61,6 +61,14 @@ installer(options);
 
 ## Options
 
+| Option     | Type    | Default        |
+| ---------- | ------- | -------------- |
+| manager    | string  | 'npm'          |
+| file       | string  | 'package.json' |
+| install    | boolean | true           |
+| updateHash | boolean | true           |
+| notify     | boolean | false          |
+
 ### manager
 
 The manager option defines the package manager that gets used to (re)install the node modules. By default it's `npm` but you can use whatever you like (as long as it supports the `install` command).
@@ -96,7 +104,15 @@ The updateHash option defines if a \*.hash file is written to disk.
 Be careful with disabling this because your target package file will be considered as changed then every time.
 
 ```
-reinstall-node-modules --updateHash false
+reinstall-node-modules --update false
+```
+
+### notify
+
+The notify option defines if a [notification](https://github.com/mikaelbr/node-notifier) gets sent in case the target package file has changed. This is in particular useful if you have disabled `install` to gently inform your colleagues they should (re)install their node modules.
+
+```
+reinstall-node-modules --notify true
 ```
 
 ## Config

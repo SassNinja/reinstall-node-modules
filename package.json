@@ -1,6 +1,6 @@
 {
   "name": "reinstall-node-modules",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "(re)install node modules only if they have changed",
   "author": "Kai Falkowski",
   "license": "MIT",
@@ -27,9 +27,11 @@
     "lightweight",
     "zero-dependency"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "node-notifier": "^7.0.1"
+  },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^26.0.1"
   },
   "jest": {
     "collectCoverage": true,
