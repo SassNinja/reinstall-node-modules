@@ -28,7 +28,7 @@
     "zero-dependency"
   ],
   "dependencies": {
-    "node-notifier": "^7.0.1"
+    "node-notifier": "^8.0.1"
   },
   "devDependencies": {
     "jest": "^26.0.1"
